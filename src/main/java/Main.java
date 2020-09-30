@@ -30,7 +30,31 @@ public class Main {
         Scanner scn = new Scanner (System.in);
         String input = "";
 
-        
+        while(!input.equals("3")){
+            System.out.println("1. Passport.");
+            System.out.println("2. Client.");
+            System.out.println("3. Exit.");
+            input = scn.nextLine();
+            if(input.equals("1")){
+                System.out.println("1. Work With Passport.");
+                InputPassport ip = new InputPassport();
+
+            }
+            else if(input.equals("2")){
+                System.out.println("2. Work With Client.");
+                InputClient ic = new InputClient();
+
+            }
+            else if(input.equals("3")){
+                System.out.println("3. Exit.");
+
+            }
+            else{
+                System.out.println("Uncorrect input.");
+            }
+        }
+
+
 
     }
 }

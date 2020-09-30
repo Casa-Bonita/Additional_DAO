@@ -19,7 +19,7 @@ public class Client {
     private String name;
 
     @NonNull
-    private int contractNumber;
+    private String contractNumber;
 
     @NonNull
     private int balance;
