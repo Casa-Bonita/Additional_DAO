@@ -21,7 +21,7 @@ public class Passport {
     private String series;
 
     @NonNull
-    private String number;
+    private int number;
 
     @NonNull
     private String holderName;

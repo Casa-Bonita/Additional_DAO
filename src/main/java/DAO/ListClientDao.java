@@ -25,19 +25,18 @@ public class ListClientDao implements Dao<Client>{
 //    }
 
     public Client getById(int id){
-        Optional <Client> opt = listClient.stream().filter(client -> client.getId() == id).findFirst();
-        if(opt.isPresent()){
-            return opt.get();
+        Optional <Client> optional = listClient.stream().filter(client -> client.getId() == id).findFirst();
+        if(optional.isPresent()){
+            return optional.get();
         }
         return null;
     }
 
     public void update (Client oldClient, Client newClient){
-        Client client = getById(oldClient.getId());
-        client.setName(oldClient.getName());
-        client.setContractNumber(oldClient.getContractNumber());
-        client.setBalance(oldClient.getBalance());
-        save(client);
+        oldClient.setName(newClient.getName());
+        oldClient.setContractNumber(newClient.getContractNumber());
+        oldClient.setBalance(newClient.getBalance());
+        save(oldClient);
     }
 
     public void remove(Client deletedClient){

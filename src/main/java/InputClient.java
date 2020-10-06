@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class InputClient {
 
-    public void inpurClient(){
+    public void inputClient(){
         String input = "";
         Scanner scn = new Scanner(System.in);
 
@@ -58,17 +58,17 @@ public class InputClient {
                 int id = Integer.parseInt(inputTemp);
 
                 System.out.println("Введите новое имя клиента:");
-                String changedName = scn.nextLine();
+                String newName = scn.nextLine();
 
                 System.out.println("Введите новый контракт:");
-                String changedContract = scn.nextLine();
+                String newContract = scn.nextLine();
 
                 System.out.println("Введите новый баланс на счёте:");
                 inputTemp = scn.nextLine();
-                int changedBalance = Integer.parseInt(inputTemp);
+                int newBalance = Integer.parseInt(inputTemp);
 
                 Client oldClient = clientService.getById(id);
-                Client newClient = new Client(changedName, changedContract, changedBalance);
+                Client newClient = new Client(newName, newContract, newBalance);
 
                 clientService.update(oldClient, newClient);
 
@@ -93,6 +93,5 @@ public class InputClient {
                 System.out.println("Uncorrect input.");
             }
         }
-
     }
 }

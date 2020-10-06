@@ -10,7 +10,7 @@ import java.util.List;
 public class ClientService {
 
     Dao<Client> dao = new ListClientDao();
-    //JpaClientDao jcd = new JpaClientDao();
+    //Dao<Client> dao = new JpaClientDao();
 
     public void save (Client client){
         dao.save(client);

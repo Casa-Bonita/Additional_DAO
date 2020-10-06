@@ -38,11 +38,13 @@ public class Main {
             if(input.equals("1")){
                 System.out.println("1. Work With Passport.");
                 InputPassport ip = new InputPassport();
+                ip.inputPassport();
 
             }
             else if(input.equals("2")){
                 System.out.println("2. Work With Client.");
                 InputClient ic = new InputClient();
+                ic.inputClient();
 
             }
             else if(input.equals("3")){

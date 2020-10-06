@@ -2,7 +2,7 @@ package model;
 
 @Entity
 @Data
-@NpArgsConstructor
+@NoArgsConstructor
 @RequiredArgsConstructor
 public class Client {
 //    Client с полями:
